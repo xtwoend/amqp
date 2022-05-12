@@ -18,9 +18,9 @@ interface ConsumerMessageInterface extends MessageInterface
 {
     public function consumeMessage($data, AMQPMessage $message): string;
 
-    public function setQueue(string $queue);
+    public function setQueue(?string $queue);
 
-    public function getQueue(): string;
+    public function getQueue(): ?string;
 
     public function isRequeue(): bool;
 

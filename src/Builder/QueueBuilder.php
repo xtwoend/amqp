@@ -21,12 +21,12 @@ class QueueBuilder extends Builder
         'x-ha-policy' => ['S', 'all'],
     ];
 
-    public function getQueue(): string
+    public function getQueue(): ?string
     {
         return $this->queue;
     }
 
-    public function setQueue(string $queue): self
+    public function setQueue(?string $queue): self
     {
         $this->queue = $queue;
         return $this;

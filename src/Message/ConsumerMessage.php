@@ -75,13 +75,13 @@ abstract class ConsumerMessage extends Message implements ConsumerMessageInterfa
         return Result::ACK;
     }
 
-    public function setQueue(string $queue): self
+    public function setQueue(?string $queue): self
     {
         $this->queue = $queue;
         return $this;
     }
 
-    public function getQueue(): string
+    public function getQueue(): ?string
     {
         return $this->queue;
     }
